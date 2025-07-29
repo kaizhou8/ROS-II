@@ -1,0 +1,77 @@
+[package]
+name = "robot_framework_rust"
+version = "0.1.0"
+edition = "2021"
+authors = ["Robot Framework Team"]
+description = "A high-performance, memory-safe robotics framework built with Rust"
+license = "MIT OR Apache-2.0"
+repository = "https://github.com/robotics/robot-framework-rust"
+keywords = ["robotics", "ros", "real-time", "embedded", "async"]
+categories = ["robotics", "embedded", "asynchronous"]
+
+[dependencies]
+# Async runtime
+tokio = { version = "1.0", features = ["full"] }
+async-trait = "0.1"
+
+# Serialization
+serde = { version = "1.0", features = ["derive"] }
+serde_json = "1.0"
+toml = "0.8"
+bincode = "1.3"
+
+# Math and linear algebra
+nalgebra = { version = "0.32", features = ["serde-serialize"] }
+
+# Random number generation
+rand = "0.8"
+
+# UUID generation
+uuid = { version = "1.0", features = ["v4", "serde"] }
+
+# Logging
+log = "0.4"
+env_logger = "0.10"
+
+# Error handling
+anyhow = "1.0"
+thiserror = "1.0"
+
+# Time handling
+chrono = { version = "0.4", features = ["serde"] }
+
+# System monitoring
+sysinfo = "0.29"
+
+# Configuration
+config = "0.13"
+
+[dev-dependencies]
+tokio-test = "0.4"
+
+[features]
+default = ["std"]
+std = []
+embedded = []
+
+[[example]]
+name = "simple_robot"
+path = "examples/simple_robot.rs"
+
+[[example]]
+name = "sensor_fusion"
+path = "examples/sensor_fusion.rs"
+
+[[example]]
+name = "ros_style_demo"
+path = "examples/ros_style_demo.rs"
+
+[profile.release]
+opt-level = 3
+lto = true
+codegen-units = 1
+panic = "abort"
+
+[profile.dev]
+opt-level = 0
+debug = true
