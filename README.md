@@ -1,21 +1,25 @@
-# Robot Framework Rust
+# Robot Framework Rust / Rust 机器人框架
 
+**English:**  
 A high-performance, memory-safe robotics framework built with Rust, providing real-time capabilities, cross-platform support, and full ROS compatibility.
 
-## 🚀 Features
+**中文:**  
+使用 Rust 构建的高性能、内存安全的机器人框架，提供实时能力、跨平台支持和完整的 ROS 兼容性。
 
-- **Zero-cost abstractions**: High performance through Rust's type system
-- **Memory safety**: Safety guarantees without runtime overhead
-- **Real-time capabilities**: Deterministic performance without garbage collection
-- **Cross-platform**: From microcontrollers to servers
-- **Async-first**: Efficient concurrency based on tokio
-- **ROS compatible**: Complete ROS-style communication patterns
-  - **Messaging**: Publish/subscribe pattern
-  - **Services**: Request/response communication
-  - **Actions**: Long-running task management
-  - **Transforms**: TF system for coordinate frame management
+## 🚀 Features / 功能特性
 
-## 📋 System Requirements
+- **Zero-cost abstractions / 零成本抽象**: High performance through Rust's type system / 通过 Rust 类型系统实现高性能
+- **Memory safety / 内存安全**: Safety guarantees without runtime overhead / 无运行时开销的安全保证
+- **Real-time capabilities / 实时能力**: Deterministic performance without garbage collection / 无垃圾回收的确定性性能
+- **Cross-platform / 跨平台**: From microcontrollers to servers / 从微控制器到服务器
+- **Async-first / 异步优先**: Efficient concurrency based on tokio / 基于 tokio 的高效并发
+- **ROS compatible / ROS 兼容**: Complete ROS-style communication patterns / 完整的 ROS 风格通信模式
+  - **Messaging / 消息**: Publish/subscribe pattern / 发布/订阅模式
+  - **Services / 服务**: Request/response communication / 请求/响应通信
+  - **Actions / 动作**: Long-running task management / 长时间运行任务管理
+  - **Transforms / 变换**: TF system for coordinate frame management / 坐标系管理的 TF 系统
+
+## 📋 System Requirements / 系统要求
 
 - Rust 1.70+ 
 - Supported platforms:
@@ -24,9 +28,9 @@ A high-performance, memory-safe robotics framework built with Rust, providing re
   - macOS (x86_64, ARM64)
   - Embedded platforms (ARM Cortex-M, ESP32, RISC-V)
 
-## 🛠️ Quick Start
+## 🛠️ Quick Start / 快速开始
 
-### Installation
+### Installation / 安装
 
 ```bash
 # Clone repository
@@ -40,7 +44,7 @@ cargo build --release
 cargo run --example simple_robot
 ```
 
-### Basic Usage
+### Basic Usage / 基本使用
 
 ```rust
 use robot_framework_rust::*;
@@ -77,26 +81,30 @@ async fn main() -> Result<()> {
 }
 ```
 
-## 🏗️ Architecture
+## 🏗️ Architecture / 架构
 
-### Core Components
+### Core Components / 核心组件
 
-- **Node System**: Modular node architecture based on traits
-- **Message System**: High-performance publish-subscribe messaging
-- **Time System**: High-precision timestamps and rate control
-- **Configuration System**: Flexible configuration management and parameter server
-- **Logging System**: Structured logging
+- **Node System / 节点系统**: Modular node architecture based on traits / 基于特征的模块化节点架构
+- **Message System / 消息系统**: High-performance publish-subscribe messaging / 高性能发布订阅消息
+- **Time System / 时间系统**: High-precision timestamps and rate control / 高精度时间戳和速率控制
+- **Configuration System / 配置系统**: Flexible configuration management and parameter server / 灵活的配置管理和参数服务器
+- **Logging System / 日志系统**: Structured logging / 结构化日志
 
-### Message Types
+### Message Types / 消息类型
 
+**English:**  
 The framework provides common robot message types:
 
-- `RobotActionMessage`: Robot action commands
-- `SensorDataMessage`: Sensor data
-- `SystemStatusMessage`: System status information
-- `NavigationGoalMessage`: Navigation goals
+**中文:**  
+框架提供常见的机器人消息类型：
 
-## 📊 Performance Characteristics
+- `RobotActionMessage`: Robot action commands / 机器人动作命令
+- `SensorDataMessage`: Sensor data / 传感器数据
+- `SystemStatusMessage`: System status information / 系统状态信息
+- `NavigationGoalMessage`: Navigation goals / 导航目标
+
+## 📊 Performance Characteristics / 性能特征
 
 | Feature | Rust Version | C# Version |
 |------|-----------|---------|
